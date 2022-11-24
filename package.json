@@ -1,0 +1,54 @@
+{
+  "name": "@hongbusi/utils",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@7.0.1",
+  "description": "Opinionated collection of common JavaScript / TypeScript utils by Hongbusi.",
+  "author": "Hongbusi",
+  "license": "MIT",
+  "homepage": "https://github.com/Hongbusi/utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hongbusi/utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hongbusi/utils/issues"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "test": "vitest",
+    "release": "bumpp package.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@hongbusi/eslint-config": "^0.3.4",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.22.0",
+    "typescript": "^4.9.3",
+    "unbuild": "^1.0.1",
+    "vite": "^3.2.4",
+    "vitest": "^0.25.3"
+  },
+  "lint-staged": {
+    "*.{vue,js,jsx,ts,tsx,json,md}": "eslint --fix"
+  }
+}
