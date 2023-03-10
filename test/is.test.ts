@@ -1,8 +1,8 @@
 import { expect, it } from 'vitest'
-import { isArray, isBoolean, isDef, isFunction, isNumber, isObject, isString } from '../src'
+import { isArray, isBoolean, isDef, isFunction, isNumber, isObject, isString, isStringNumber } from '../src'
 
 it('is', () => {
-  // undefined
+  // defined
   expect(isDef(1)).toBe(true)
   expect(isDef(undefined)).toBe(false)
 
@@ -29,4 +29,10 @@ it('is', () => {
   // object
   expect(isObject({})).toBe(true)
   expect(isObject([])).toBe(false)
+
+  // stringNumber
+  expect(isStringNumber('1')).toBe(true)
+  expect(isStringNumber(0)).toBe(false)
+  expect(isStringNumber('test')).toBe(false)
+  expect(isStringNumber('测试')).toBe(false)
 })

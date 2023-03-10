@@ -7,3 +7,8 @@ export const isString = (val: any): val is string => typeof val === 'string'
 export const isArray = Array.isArray
 export const isFunction = <T extends Function>(val: any): val is T => typeof val === 'function'
 export const isObject = (val: any): val is object => toString(val) === '[object Object]'
+export const isStringNumber = (val: any): val is boolean => {
+  if (!isString(val))
+    return false
+  return !Number.isNaN(Number(val))
+}
