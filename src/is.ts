@@ -13,3 +13,7 @@ export const isStringNumber = (val: any): val is boolean => {
     return false
   return !Number.isNaN(Number(val))
 }
+// @ts-expect-error
+export const isWindow = (val: any): boolean => typeof window !== 'undefined' && toString(val) === '[object Window]'
+// @ts-expect-error
+export const isBrowser = typeof window !== 'undefined'
