@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "target": "es2018",
-    "module": "esnext",
     "lib": ["esnext"],
+    "baseUrl": ".",
+    "module": "esnext",
     "moduleResolution": "node",
-    "esModuleInterop": true,
+    "resolveJsonModule": true,
     "strict": true,
     "strictNullChecks": true,
-    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "skipLibCheck": true
   }
 }
